@@ -63,7 +63,7 @@ module FSM
   enum logic [3:0] {INIT, CAR1, CAR2, CAR3_4, PED, 
                     YELLOW1, YELLOW2, YELLOW3, DELAY} state, nextState;
   
-  always_ff @(posedge clock, negedge clock)
+  always_ff @(posedge clock)
     if (reset)
       state <= INIT;
     else
