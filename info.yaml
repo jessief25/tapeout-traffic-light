@@ -3,7 +3,7 @@ project:
   source_files:
     - toplevel_chip.v
     - chip.sv
-    - decoder.v
+    - datapath.sv
   top_module:  "toplevel_chip"
 
 # As everyone will have access to all designs, try to make it easy for someone new to your design to know what
@@ -13,15 +13,15 @@ project:
 #
 # This info will be automatically collected and used to make a datasheet for the chip.
 documentation: 
-  author:       "PLACEHOLDER"      # Your name
-  discord:      ""      # Your discord handle
-  title:        "PLACEHOLDER"      # Project title
-  description:  "PLACEHOLDER"      # Short description of what your project does
-  how_it_works: "PLACEHOLDER"      # Longer description of how the project works
-  how_to_test:  "PLACEHOLDER"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  "PLACEHOLDER"      # Describe any external hardware needed
-  language:     "verilog" # other examples include Verilog, Amaranth, VHDL, etc
-  doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
+  author:       "Jessie Fan"      # Your name
+  discord:      "sweaty#5935"      # Your discord handle
+  title:        "Morewood traffic light"      # Project title
+  description:  "Functions as a traffic light & cross walk light signals which takes in inputs of which cars are waiting and if the pedestrian crossing button has been pressed."      # Short description of what your project does
+  how_it_works: "FSM-D Uses an FSM (Moore style) to control the different states for each light for each car/ped waiting. Also uses multiple counters (to count the time allotted for cars to go in each direction) and a register to hold whether the pedestrian crossing button has been pressed."      # Longer description of how the project works
+  how_to_test:  ""      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  "INPUT: 1 pedestrian waiting to cross input [ped], 3 car waiting signals for each (straight) direction [car1, car2, car3], 1 car waiting signal for the turning lane [car 4] | OUTPUT: 3 LEDS (red, yellow, green) for each direction (9 total) [red1, yellow1, green1, etc.], 1 additional LED for the turn signal (could be any color) [turn], 2 LEDS (orange and white) for whether the pedestrian should cross or not [orange, white]"      # Describe any external hardware needed
+  language:     "SystemVerilog" # other examples include Verilog, Amaranth, VHDL, etc
+  doc_link:     "https://github.com/jessief25/tapeout-traffic-light/blob/main/README.md"      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     1000       # Clock frequency in Hz (if required)
   picture:      ""      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
