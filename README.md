@@ -15,25 +15,23 @@ in each direction) and a register to hold whether the pedestrian
 crossing button has been pressed.
 To add images, upload them into the repo and use the following format to
 embed them in markdown:
-![](Screen Shot 2023-05-05 at 6.02.52 PM.png)
+![FSM]((https://github.com/jessief25/tapeout-traffic-light/blob/main/Screen%20Shot%202023-05-05%20at%206.02.52%20PM.png))
 ## Inputs/Outputs
-(describe what each of the 12 input and 12 output pins are used for; )
-(if you have any specific dependency on clock frequency; i.e. for visual
-effects or for an external interface, explain it here.)
-## Hardware Peripherals
-(if you have any external hardware peripherals such as buttons, LEDs,
-sensors, etc, please explain them here. otherwise, remove this section)
+I plan to implement a 3-way traffic intersection that includes: 1 crosswalk that signals
+when pedestrians should walk and when they should wait, 3 traffic lights for each
+direction (one of these traffic lights will include a turn signal in addition to the standard
+green, yellow and red lights).
+Inputs:
+● 1 pedestrian waiting to cross input [ped]
+● 3 car waiting signals for each (straight) direction [car1, car2, car3]
+● 1 car waiting signal for the turning lane [car 4]
+Outputs:
+● 3 LEDS (red, yellow, green) for each direction (9 total) [red1, yellow1, green1, etc.]
+● 1 additional LED for the turn signal (could be any color) [turn]
+● 2 LEDS (orange and white) for whether the pedestrian should cross or not [orange,
+white]
 ## Design Testing / Bringup
-(explain how to test your design; if relevant, give examples of inputs and
-expected outputs)
-(if you would like your design to be tested after integration but before
-tapeout, provide a Python script that uses the Debug Interface posted on
-canvas and explain here how to run the testing script)
+I tested this design by picking plausible inputs (combinations of cars and pedestrians waiting) to 
+plug into a test bench and visually check if the output (traffic lights) matches what I expected. 
 ## Media
-(optionally include any photos or videos of your design in action)
-## (anything else)
-If there is anything else you would like to document about your project
-such as background information, design space exploration, future ideas,
-verification details, references, etc etc. please add it here. This
-template is meant to be a guideline, not an exact format that you're
-required to follow.
+file containing output of test bench is included
