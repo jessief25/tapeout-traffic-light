@@ -13,8 +13,6 @@ for each light for each car/ped waiting. Also uses
 multiple counters (to count the time allotted for cars to go
 in each direction) and a register to hold whether the pedestrian
 crossing button has been pressed.
-To add images, upload them into the repo and use the following format to
-embed them in markdown:
 ![FSM]((https://github.com/jessief25/tapeout-traffic-light/blob/main/Screen%20Shot%202023-05-05%20at%206.02.52%20PM.png))
 ## Inputs/Outputs
 I plan to implement a 3-way traffic intersection that includes: 1 crosswalk that signals
