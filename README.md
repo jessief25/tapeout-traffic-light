@@ -34,4 +34,5 @@ white] <br>
 I tested this design by picking plausible inputs (combinations of cars and pedestrians waiting) to 
 plug into a test bench and visually check if the output (traffic lights) matches what I expected. 
 ## Media
-file containing output of test bench is included
+file containing output of test bench is included <br>
+https://github.com/jessief25/tapeout-traffic-light/blob/main/traffic_light.sim
